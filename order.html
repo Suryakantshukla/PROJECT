@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Food Order System</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        max-width: 300px;
+    }
+    
+    .item img {
+        max-width: 100%;
+    }
+    
+    button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    #cart {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .price {
+        font-weight: bold;
+    }
+    
+</style>    
+</head>
+<body>
+    <h1>Food Menu</h1>
+    <div class="menu">
+        <div class="item">
+            <img src="https://d4t7t8y8xqo0t.cloudfront.net/resized/720X480/restaurant%2F652773%2Frestaurant120180122083155.png" alt="Burger">
+            <h2>Burger</h2>
+            <p>Delicious burger with cheese and veggies.</p>
+            <p class="price">$5.99</p>
+            <button onclick="addToCart('Burger', 5.99)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Buddy meal.jpg" alt="Buddy meal">
+            <h2>Buddy meal</h2>
+            <p>Deluxe Buddy meal with assorted toppings.</p>
+            <p class="price">$8.99</p>
+            <button onclick="addToCart('Buddy meal', 8.99)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="pizza.jpg" alt="Pizza">
+            <h2>Pizza</h2>
+            <p>Deluxe pizza with assorted toppings.</p>
+            <p class="price">$8.99</p>
+            <button onclick="addToCart('Pizza', 8.99)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="chicken buckets.jpg" alt="chicken buckets">
+            <h2>chicken buckets</h2>
+            <p>Delicious chicken buckets.</p>
+            <p class="price">$10.99</p>
+            <button onclick="addToCart('chicken buckets', 10.99)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="pepsi.jpg" alt="pepsi">
+            <h2>Pepsi</h2>
+            <p>Take a Pepsi and Enjoy With Food.</p>
+            <p class="price">$0.80</p>
+            <button onclick="addToCart('pepsi', 0.80)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="2 pc &Crispy chicken.jpg" alt="pc & Crispy chicken">
+            <h2>pc & Crispy chicken</h2>
+            <p>Very Delicious food.</p>
+            <p class="price">$12.99</p>
+            <button onclick="addToCart('pc & Crispy chicken', 12.99)">Add to Cart</button>
+        </div>
+       
+    </div>
+    
+    <h2>Your Cart</h2>
+    <ul id="cart"></ul>
+    <p>Total: $<span id="total">0.00</span></p>
+
+    <script >
+        function addToCart(itemName, itemPrice) {
+            const cart = document.getElementById("cart");
+            const total = document.getElementById("total");
+            
+            const listItem = document.createElement("li");
+            listItem.textContent = `${itemName} - $${itemPrice}`;
+            cart.appendChild(listItem);
+        
+        
+            const currentTotal = parseFloat(total.textContent);
+            total.textContent = (currentTotal + itemPrice).toFixed(2);
+        }
+        </script>
+        <button onclick="document.location='payment form.html'">Payment </button>
+</body>
+</html>
