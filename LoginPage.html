@@ -4,10 +4,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">  
 <title> Login Page </title>  
 <style>   
-Body {  
-   
-  font-family: Calibri, Helvetica, sans-serif;  
-  background:url(SurveFood.jpg)  
+Body { 
+    display: flex;
+    align-items: center;
+     justify-content: center;
+     width: auto;
+     font-family: Calibri, Helvetica, sans-serif;  
+     background:url(SurveFood.jpg)  
 }  
 button {   
        background-color: #4CAF50;   
@@ -16,10 +19,12 @@ button {
         padding: 15px;   
         margin: 10px 0px;     
         border-radius: 20px; 
-        cursor: pointer;   
+        cursor: pointer; 
+
          }   
  form {   
-        
+    
+        margin-top: 10%;
         border: 3px solid #190404e0;   
     }   
  input[type=text], input[type=password] {   
@@ -34,27 +39,30 @@ button {
         opacity: 0.7; 
          color: red;
     }  
-        
-     
+
  .container {   
+    
         padding: 25px;   
-        background-color: lightblue;  
+        background-color: lightblue; 
+        
     }   
+    
 </style>   
 </head>    
 <body>    
-    <center> <h1> Customer Login</h1> </center>   
-    <form>  
-        <div class="container">   
+  
+        <form >  
+        <div class="container">  
+            <center>   <h1> User Login</h1></center> 
+
             <label>Username : </label>   
             <input type="text" placeholder="Enter Username" name="username" required>  
             <label>Password : </label>   
             <input type="password" placeholder="Enter Password" name="password" required>  
             <button type="submit">Login</button>   
-            <input type="checkbox" checked="checked"> Remember me   
-           
-            Forgot <a href="#"> password? </a>   
+            <input type="checkbox" checked="checked"> Remember me <a href="#"> Forgot password? </a>   
         </div>   
-    </form>     
+    </form>
+    
 </body>     
 </html>
