@@ -15,6 +15,7 @@
             text-align: center;
             border: 3px solid green;
               }
+     
         .container {
             max-width: 1100px;
             margin: auto;
@@ -24,28 +25,44 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-      .header, .footer {
+
+        .header, .footer {
             background: #333;
             color: #fff;
             text-align: center;
             padding: 20px 0;
         }
+  
         .card img {
             max-width: 80%;
             height: auto;
             max-width: 100%; /* Makes image responsive */
             height: 50%; /* Maintains aspect ratio */
         }
+
         .card h3 {
             color: #333;
         }
+        
         .card {
             flex: 1; /* Allows cards to grow and fill the space */
             max-width: calc(50% - 20px); /* Adjust based on the gap to ensure proper spacing */
         }
+
+        .price {
+            font-weight: bold;
+            color: lightgreen;
+        }
+        
+        #cart {
+            list-style-type: none;
+            padding: 0;
+        }
+        
     </style>
 </head>
 <body>
+
 <div class="header">
     <h1>Veg Food Delights</h1>
 </div>
@@ -54,17 +71,22 @@
         <img src="Veg1.jpg" alt="Veg Dish 1">
         <h3>Delicious Indian Daal & Rice</h3>
         <p>This daal is a harmonious blend of fresh vegetables and aromatic spices, simmered to perfection.</p>
+        <p class="price">₹ 150</p>
+        <button onclick="addToCart">Add to Cart</button>
     </div>
     <div class="card">
         <img src="Veg2.jpg" alt="Veg Dish 2">
         <h3>Refreshing North Indian Thali</h3>
         <p>A traditional platter consisting of various dishes like sabzi, dal, rice, roti, papad, and sweet.</p>
+        <p class="price">₹ 199</p>
+        <button onclick="addToCart">Add to Cart</button>
     </div>
+    
     <!-- Add more cards/dishes here -->
 </div>
+
 <div class="footer">
     <p>Copyright &copy; 2024 Veg Food Delights</p>
 </div>
-
 </body>
 </html>
