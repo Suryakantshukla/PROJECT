@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veg Food Delights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            border: 3px solid green;
+              }
+     
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .header, .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+  
+        .card img {
+            max-width: 80%;
+            height: auto;
+            max-width: 100%; /* Makes image responsive */
+            height: 50%; /* Maintains aspect ratio */
+        }
+
+        .card h3 {
+            color: #333;
+        }
+        
+        .card {
+            flex: 1; /* Allows cards to grow and fill the space */
+            max-width: calc(50% - 20px); /* Adjust based on the gap to ensure proper spacing */
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Veg Food Delights</h1>
+</div>
+<div class="container">
+    <div class="card">
+        <img src="Veg1.jpg" alt="Veg Dish 1">
+        <h3>Delicious Indian Daal & Rice</h3>
+        <p>This daal is a harmonious blend of fresh vegetables and aromatic spices, simmered to perfection.</p>
+    </div>
+    <div class="card">
+        <img src="Veg2.jpg" alt="Veg Dish 2">
+        <h3>Refreshing North Indian Thali</h3>
+        <p>A traditional platter consisting of various dishes like sabzi, dal, rice, roti, papad, and sweet.</p>
+    </div>
+    
+    <!-- Add more cards/dishes here -->
+</div>
+
+<div class="footer">
+    <p>Copyright &copy; 2024 Veg Food Delights</p>
+</div>
+
+</body>
+</html>
